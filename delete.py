@@ -1,4 +1,6 @@
 import sqlite3
+import mysqldb
+print(mysqldb)
 
 dbport = sqlite3.connect('mytesting')
 c = dbport.cursor()

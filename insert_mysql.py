@@ -53,4 +53,4 @@ print("^^old\ndeleting numbers\nnewvv")
 delete_numbers()
 print_numbers()
 connection.commit()
-connection.close()|
+connection.close()

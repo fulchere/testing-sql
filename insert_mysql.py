@@ -29,11 +29,11 @@ def delete_fruit(name):
 
 def create_table():
     cursor.execute("DROP TABLE IF EXISTS numbers")
-    cursor.execute("CREATE TABLE IF NOT EXISTS numbers(first BIGINT, second BIGINT, third BIGINT)")
+    cursor.execute("CREATE TABLE IF NOT EXISTS numbers(first DOUBLE, second DOUBLE, third DOUBLE)")
 
 def populate_table():
     number = 0
-    while (number < 10):
+    while (number < 100000):
         fr,sc,th = number, number*number, number*number*number
         cursor.execute(f"INSERT INTO numbers VALUES({fr},{sc},{th})")
         number += 1
@@ -48,9 +48,10 @@ def delete_numbers():
 
 create_table()
 populate_table()
-print_numbers()
+#print_numbers()
 print("^^old\ndeleting numbers\nnewvv")
-delete_numbers()
-print_numbers()
+#delete_numbers()
+#print_numbers()
 connection.commit()
 connection.close()
+print("done.")

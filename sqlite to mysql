@@ -1,0 +1,10 @@
+get rid of all '' around names
+
+added ENGINE=InnoDB to the end of each create table statement
+
+AUTOINCREMENT needs to be renamed to AUTO_INCREMENT
+
+changed TEXT to VARCHAR(190)
+
+on line  sample_method VARCHAR(190) NOT NULL CHECK(sample_method in ( "monitor" , "scan" )),
+mariadb didnt allow defaults that arennt empty strings

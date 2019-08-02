@@ -5,11 +5,15 @@ config = {
   'user': 'root',
   'password': 'root',
   'host': 'localhost',
-  'database': 'Ethans_Database'
 }
 connection = mysql.connector.connect(**config)
 cursor = connection.cursor()
+cursor.execute("SHOW DATABASES;")
+for db in cursor:
+    print(db)
 
+
+'''
 def print_fruits():
     cursor.execute("SELECT * FROM fruits;")
     for name, price, color in cursor:
@@ -54,4 +58,4 @@ print("^^old\ndeleting numbers\nnewvv")
 #print_numbers()
 connection.commit()
 connection.close()
-print("done.")
+print("done.")'''

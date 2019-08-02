@@ -1,6 +1,7 @@
 import sqlite3
 from updown import get_list
-
+from updown import mylis
+print(mylis)
 dbport = sqlite3.connect('mytesting')
 c = dbport.cursor()
 

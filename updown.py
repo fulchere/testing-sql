@@ -10,6 +10,8 @@ f.close()
     
 def get_list():
     l = []
-    for i in range(100):
+    for i in range(10):
         l.append((i,i*2,i*i))
     return l
+
+mylis = get_list()

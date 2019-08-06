@@ -11,6 +11,25 @@ cursor = connection.cursor()
 cursor.execute("SHOW DATABASES;")
 for db in cursor:
     print(db)
+cursor.execute("use iocmdatabase;")
+
+#cursor.execute("SELECT COUNT(*) FROM record, alias WHERE alias.record_id=record.id AND record.iocinstance_id=14;")
+cursor.execute("SELECT COUNT(*) as num_records FROM record WHERE record.iocinstance_id=14;")
+#d = dict(cursor.fetchone()).get('num_records',None)
+d = cursor.fetchone()
+print(type(d))
+print(d)
+print(type(("""AAAA bbbb CCCC dddd""")))
+
+
+
+
+'''
+cursor.execute("select count(*) as num_aliases from record, alias where alias.record_id=record.id;")
+for item in cursor:
+    print(str(item))
+    print(type(item))
+'''
 
 
 '''
